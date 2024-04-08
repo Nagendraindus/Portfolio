@@ -1,0 +1,118 @@
+@import "../../app.scss";
+
+
+.hero{
+    height:calc(100vh - 100px);
+    overflow: hidden;
+    background-color: #343486;
+    background-image: linear-gradient(0deg, #343486 0%, #0c0c1d 100%);
+    position: relative;
+
+
+    .wrapper{
+        max-width: 1300px;
+        height: 100%;
+        margin: auto;
+
+
+        .aboutcontainer{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            @include mobile {
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+                .scroll-img{
+                    display: none;
+                }
+              }
+            
+        }
+
+        h2{
+            font-size: 49px;
+            color: #5F065F; 
+            letter-spacing: 10PX;
+ 
+         }
+ 
+
+        h1{
+            font-size: 80px;
+            letter-spacing: 5PX;
+            @include mobile {
+                font-size: 36px;
+              }
+        }
+
+        .buttons{
+            button{
+                position: relative;
+                
+                padding: 20px;
+                border: 1px solid white;
+                border-radius: 10px;
+                background-color: transparent;
+                color: white;
+                margin-right: 20px;
+                cursor: pointer;
+                font-weight: 300;
+                z-index: 3;
+
+                
+            }
+
+            button:hover {
+                background-color: white;
+                color: black; /* Change text color for better contrast */
+              }
+            
+        }
+
+        img{
+            width: 50px;
+        }
+
+        
+        
+    }
+
+    .imageContainer{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+          }
+          img{
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+          }
+    }
+
+    .slidingText{
+        font-size: 40vh;
+        position: absolute;
+        bottom: -65px;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 50%;
+        font-weight: bold;
+        z-index: 1;
+    }
+    
+}
+
